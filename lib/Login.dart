@@ -21,10 +21,34 @@ class _LogpageState extends State<Logpage> {
                     colors: [Colors.white, Colors.blue.shade100])),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [_Loginform(), _Buttonlog(context)],
+              children: [_textWelcome(), _Loginform(), _Buttonlog(context)],
             ),
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _textWelcome() {
+    return Center(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+          ),
+          SizedBox(width: 8),
+          Text(
+            "Login Page",
+            style: TextStyle(
+              fontSize: 36,
+              color: Colors.blue.shade800,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+        ],
       ),
     );
   }
